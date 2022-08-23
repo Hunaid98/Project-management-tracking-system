@@ -1,0 +1,120 @@
+.primary-btn {
+  @apply bg-brand flex h-auto items-center justify-center border-brand p-1 px-7 shadow-brand outline-none rounded text-btnColor cursor-pointer;
+  transition: all 0.3s ease-in-out;
+
+  span {
+    @apply py-1;
+  }
+  &:hover,
+  &:focus {
+    @apply bg-secondaryBrand border-brand text-btnColor;
+  }
+  &:focus {
+    @apply bg-brand;
+  }
+}
+
+.primary-btn-pdsm {
+  @extend .primary-btn;
+  padding: 1px 13px;
+}
+
+.danger-btn-pdsm {
+  @extend .primary-btn-pdsm;
+  @apply bg-danger border-danger shadow-danger;
+  &:hover,
+  &:focus {
+    @apply bg-danger/80 border-danger text-btnColor;
+  }
+  &:focus {
+    @apply bg-danger;
+  }
+}
+
+.primary-btn-unfilled {
+  @extend .primary-btn;
+  @apply bg-white text-brand;
+  padding: 1px 13px;
+
+  &:hover,
+  &:focus {
+    @apply bg-brand/10 text-brand;
+  }
+  &:focus {
+    @apply bg-white;
+  }
+}
+
+.default-btn-unfilled {
+  @extend .primary-btn-unfilled;
+  @apply text-primary shadow border-gray-300;
+  &:hover,
+  &:focus {
+    @apply bg-gray-200/20 border-gray-300 text-primary;
+  }
+  &:focus {
+    @apply bg-white;
+  }
+}
+
+.label-inp {
+  @apply relative w-full mb-7;
+
+  .ant-select {
+    @apply border-b-gray-200;
+    .ant-select-selector {
+      @apply border-transparent p-0 border-b-secondary/40;
+      &:hover,
+      &:focus {
+        @apply border-transparent border-b-brand;
+      }
+      .ant-select-selection-search {
+        @apply left-0;
+      }
+    }
+  }
+  .ant-select-focused {
+    .ant-select-selector {
+      box-shadow: none !important;
+      border-color: transparent !important;
+      border-bottom-color: rgb(24 29 37 / 0.4) !important;
+    }
+  }
+  .anim-label {
+    @apply text-sm -top-6;
+  }
+  input {
+    @apply border-b hover:border-brand p-1 pl-0 w-full border-secondary/40 outline-none;
+    &:focus {
+      @apply border-brand;
+    }
+    &:focus ~ label {
+      @extend .anim-label;
+    }
+    &:valid ~ label {
+      @extend .anim-label;
+      @apply -top-6;
+    }
+  }
+  label {
+    @apply text-lg absolute text-secondary/70 top-0 left-0 pointer-events-none;
+    transition: all 0.25s ease-in-out;
+  }
+  .head {
+    @apply text-lg text-secondary/70;
+  }
+  i {
+    @apply absolute top-1 right-0 text-base;
+    svg {
+      @apply hover:text-brand cursor-pointer;
+    }
+  }
+}
+
+.hovPrimary-btn {
+  @extend .primary-btn;
+  @apply bg-transparent text-secondary border-transparent;
+  &:hover {
+    @apply bg-brand border-brand;
+  }
+}

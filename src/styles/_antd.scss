@@ -1,0 +1,58 @@
+.ant-tooltip {
+  .ant-tooltip-content {
+    @apply rounded-md flex items-center justify-center;
+    .ant-tooltip-inner {
+      @apply pt-1 text-xs rounded-md;
+      line-height: 2;
+    }
+  }
+}
+
+.ant-dropdown,
+.ant-dropdown-menu-submenu {
+  .anticon {
+    display: none;
+  }
+  .ant-dropdown-menu {
+    border-radius: 6px;
+    @apply border border-gray-300;
+    .ant-dropdown-menu-item {
+      @apply hover:bg-gray-100;
+    }
+    .ant-dropdown-menu-submenu-title {
+      padding-right: 10px;
+    }
+    .ant-dropdown-menu-item-divider {
+      @apply bg-gray-300;
+    }
+  }
+}
+
+.ant-dropdown-menu-submenu-title {
+  @apply flex items-center;
+}
+
+.ant-select {
+  @apply w-full;
+}
+
+.ant-modal-root {
+  .ant-modal-mask {
+    @apply bg-white/25 backdrop-blur-sm;
+  }
+
+  .ant-modal-wrap {
+    .ant-modal {
+      transform-origin: 50% 50% !important;
+      .ant-modal-content {
+        @apply rounded-xl;
+      }
+    }
+    .delete-modal {
+      width: 450px !important;
+    }
+    .add-sublist-modal {
+      width: 690px !important;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.task {
+  &:hover {
+    .abs-actions,
+    .before-actions {
+      i {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  .abs-actions {
+    i {
+      svg {
+        @apply text-gray-600;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .abs-actions,
+  .before-actions {
+    i {
+      opacity: 0;
+      visibility: hidden;
+    }
+    .visib {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

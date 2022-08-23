@@ -1,0 +1,27 @@
+.auth {
+  header {
+    nav {
+      @apply uppercase text-sm font-light tracking-wide;
+    }
+  }
+  section {
+    h1 {
+      @apply mt-11 text-3xl font-semibold;
+    }
+    p {
+      @apply mt-2 text-secondary text-lg;
+    }
+    form {
+
+    }
+    .option {
+      @apply w-3/12 mt-14 border-t border-gray-300;
+      p {
+        @apply text-sm text-secondary/40 mt-5;
+        span {
+          @apply text-brand cursor-pointer;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import "~antd/dist/antd.css";
+@import "colors";
+@import "font";
+@import "classes";
+@import "antd";
+@import "./global";
+@import "./components/header";
+@import "./components/baseinfo";
+@import "./components/sidebar";
+@import "./components/task";
+@import "./pages/auth";
+@import "./pages/taskpage";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $inter;
+  overflow: hidden;
+  // background-color: $btnClr;
+  color: $primary;
+}
